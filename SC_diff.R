@@ -3,7 +3,6 @@
 
 suppressWarnings(suppressMessages(library(dplyr)))
 suppressWarnings(suppressMessages(library(data.table)))
-suppressWarnings(suppressMessages(library(pbapply)))
 
 options(scipen=10)
 options(dplyr.summarise.inform = FALSE)
