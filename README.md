@@ -31,7 +31,7 @@ Packages will be install in a few minutes.
 # Demo
 The demo data set was constructed by extracting a total of 1.5 million reads from processed Hi-C data (wt_pFA_MboI_Hi-C) of GSE270686. The data can be downloaded from the following link:  https://uo-cgf.s3.us-west-2.amazonaws.com/P/020/demo.map.gz
 
-Example output from the test data is available in the demo_result folder. The running time is approximately xxx minutes. 
+Example output from the test data is available in the demo_result folder. The running time for the LB score on the demo data is approximately 12 minutes. The running time for the SC score on the demo data is approximately a few seconds.
 
 # Instructions for use
 Example Commands for Calculating Scores

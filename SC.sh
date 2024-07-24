@@ -122,3 +122,4 @@ zcat ${FILE_MAP} | awk -v OFS='\t' -v tt=${THRESHOLD} -v ss=${SHIFT_BP} 'BEGIN{
 
 
 Rscript --vanilla --no-echo ${DIR_LIB}/Convert_SC_to_bedgraph.R -i ${FILE_OUT}_tmp -o ${FILE_OUT} -b ${SHIFT_BP} --chrom_length ${CHROM_SIZE}
+rm ${FILE_OUT}_tmp
