@@ -6,7 +6,7 @@ The LBSC pipeline is designed for use in a Linux environment but can also be run
 The LBSC pipeline requires only a standard computer with sufficient RAM to support the operations defined by the user. For minimal performance, a computer with approximately 2 GB of RAM is recommended.
 
 # Software Requirement
-The following software is required to execute the LBSC pipeline. The versions listed in parentheses were used for verification during the creation of this protocol: 
+The following software is required to execute the LBSC pipeline. The versions listed in parentheses were used for verification during the creation of this pipeline: 
 
 + Git (version 2.34.1) -- A distributed version control system with speed and efficiency. https://git-scm.com/
 + Bash (version 5.1.16) -- A Unix shell and command language. https://www.gnu.org/software/bash/
@@ -15,10 +15,12 @@ The following software is required to execute the LBSC pipeline. The versions li
 
 
 # Installin guide
-The user can downloading the LBSC piepline usein the command provided below.
+The user can download the LBSC piepline using the command provided below:
 ```
 git clone https://github.com/rafysta/LBSC.git
 ```
+Pipeline will be install in a fseconds.
+
 
 To install the necessary R packages for execution, run "install_libraries.R" as follows:
 
