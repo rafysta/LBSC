@@ -1,5 +1,5 @@
 #!/usr/bin/Rscript
-# calculate difference of LB score
+# calculate the difference of LB or SC score
 
 suppressWarnings(suppressMessages(library(dplyr)))
 suppressWarnings(suppressMessages(library(data.table)))
@@ -9,8 +9,8 @@ options(dplyr.summarise.inform = FALSE)
 
 suppressPackageStartupMessages(library("optparse"))
 option_list <- list(  
-  make_option(c("-a", "--target"), default="NA", help="targetのbedgraph"),
-  make_option(c("-b", "--control"), default="NA", help="controlのbedgraph"),
+  make_option(c("-a", "--target"), default="NA", help="bedgraph from target"),
+  make_option(c("-b", "--control"), default="NA", help="bedgraph from control"),
   make_option(c("-o", "--out"), help="bedgraph file"),
   make_option(c("--outsimple"), default="NA", help="output without normalization"),
   make_option(c("--image"), default="NA", help="scatter plot image"),
