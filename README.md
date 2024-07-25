@@ -14,7 +14,7 @@ The following software is required to execute the LBSC pipeline. The versions li
 + KentUtils (20240611) -- A collection of utility programs for bioinformatics, primarily used for processing and analyzing genomic data  https://github.com/ENCODE-DCC/kentUtils
 
 
-# Installin guide
+# Install guide
 The user can download the LBSC piepline using the command provided below:
 ```
 git clone https://github.com/rafysta/LBSC.git
@@ -33,7 +33,7 @@ Packages will be install in a few minutes.
 # Demo
 The demo data set was constructed by extracting a total of 1.5 million reads from processed Hi-C data (wt_pFA_MboI_Hi-C) of GSE270686. The data can be downloaded from the following link:  https://uo-cgf.s3.us-west-2.amazonaws.com/P/020/demo.map.gz
 
-Example output from the test data is available in the demo_result folder. The running time for the LB score on the demo data is approximately 12 minutes. The running time for the SC score on the demo data is approximately a few seconds.
+Example output from the test data is available in the demo_data folder. The running time for the LB score on the demo data is approximately 12 minutes. The running time for the SC score on the demo data is approximately a few seconds.
 
 # Instructions for use
 Example Commands for Calculating Scores
@@ -42,37 +42,20 @@ To calculate the LB score, use the following command:
 sh LB.sh -i <map file> -o <output bedgraph> -c <chromosome size>
 ```
 
-For more detailed instructions, run:
-```
-sh LB.sh --help
-```
-
 To calculate the SC score, use the following command:
 ```
 sh SC.sh -i <map file> -o <output bedgraph> -c <chromosome size>
 ```
 
-For more detailed instructions, run:
+To calculate the difference between two LB or SC scores, use the following command:
 ```
+Rscript Diff.R --target <bedgraph of target> --control <bedgraph of control> --chrom_length <chromosome size> --outsimple <output bedgraph>
+```
+
+For more detailed instructions on any of the above commands, run the command with the --help option:
+```
+sh LB.sh --help
 sh SC.sh --help
+Rscript Diff.R --help
 ```
 
-To calculate the difference between two LB scores, use the following command:
-```
-Rscript LB_diff.R --target <bedgraph of LB for target> --control <bedgraph of LB for control> --chrom_length <chromosome size> --outsimple <output bedgraph>
-```
-
-For more detailed instructions, run:
-```
-Rscript LB_diff.R --help
-```
-
-To calculate the difference between two SC scores, use the following command:
-```
-Rscript SC_diff.R --target <bedgraph of SC for target> --control <bedgraph of SC for control> --chrom_length <chromosome size> --outsimple <output bedgraph>
-```
-
-For more detailed instructions, run:
-```
-Rscript SC_diff.R --help
-```
